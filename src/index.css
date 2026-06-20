@@ -149,3 +149,10 @@
     @apply font-mono;
     }
 }
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+button {
+    -webkit-app-region: no-drag;
+}

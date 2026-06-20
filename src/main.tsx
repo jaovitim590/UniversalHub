@@ -1,10 +1,25 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { HubPage } from './pages/hub'
+import ReactDOM from "react-dom/client";
+import {
+    createBrowserRouter,
+    RouterProvider
+} from "react-router-dom";
+import { MainPage } from "./pages/MainPage";
+import { MainLayout } from "./layout/MainLayout";
+import "./index.css"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <HubPage />
-  </StrictMode>,
-)
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MainLayout />,
+        children: [
+            {
+                index: true,
+                element: <MainPage />
+            }
+        ]
+    }
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+    <RouterProvider router={router} />
+);

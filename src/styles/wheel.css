@@ -1,0 +1,14 @@
+/* estilos auxiliares (adicione ao seu import global ou index.css) */
+.wheel-container {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/* pointer triangle (you can customize with your theme variables) */
+.wheel-pointer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10px;
+}
